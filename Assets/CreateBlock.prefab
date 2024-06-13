@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &995256874618489866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4619091213366945776}
+  - component: {fileID: 3422105119120540289}
+  m_Layer: 0
+  m_Name: CreateBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4619091213366945776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995256874618489866}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5172607, y: -0.07637682, z: -1.1209915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3422105119120540289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995256874618489866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b962c9215c833c04eafedb391f7a2b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createPrefab: {fileID: 7149252549037989678, guid: 9d1da7ff8c2721a41a5ba01e794d5908, type: 3}
+  rangeA: {fileID: 2214113334647503668, guid: cdf7b3d918943134484ad04a554e59fd, type: 3}
+  rangeB: {fileID: 7992052577863734771, guid: 28c12e57e8534f04788e4962c3d1cfcb, type: 3}
+  createPrefab2: {fileID: 8009779395422098254, guid: 70166841d04a6964bbe2b21affecd2cd, type: 3}
+  rangeC: {fileID: 5594318538422771576, guid: d52d3b4adcee478419809508b8c60ad7, type: 3}
+  rangeD: {fileID: 3339906391028891492, guid: 23684b4d6d25c2f49a11700eaf3cd8c9, type: 3}
+  target: {fileID: 7460546740308318891, guid: 9d1da7ff8c2721a41a5ba01e794d5908, type: 3}
+  scoreText: {fileID: 1020418489880714113, guid: 63c7126ddc3ea504f9e0caae2ae75806, type: 3}
+  CDT: {fileID: 7712833470440938767, guid: 1fc67660c49c5c64098ebee237d1ecbf, type: 3}
+  score: 0

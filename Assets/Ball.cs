@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class BallScrypt : MonoBehaviour
@@ -24,21 +21,22 @@ public class BallScrypt : MonoBehaviour
 
 
 
-        // 画面の左下の座標を取得 (左上じゃないので注意)
+
 
 
     // Start is called before the first frame update
     void Start()
     {
     myTransform = transform;
-
+    myRigidBody = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // 画面の左下の座標を取得 (左上じゃないので注意)
     UnityEngine.Vector2 screen_LeftBottom = Camera.main.ScreenToWorldPoint(UnityEngine.Vector3.zero);
-// 画面の右上の座標を取得 (右下じゃないので注意)
+        // 画面の右上の座標を取得 (右下じゃないので注意)
     UnityEngine.Vector2 screen_RightTop = Camera.main.ScreenToWorldPoint(
     new UnityEngine.Vector3(Screen.width, Screen.height, 0));
 
@@ -113,7 +111,6 @@ myRigidBody.velocity = vec;
     public void GameStart()
         {
         //CB.score = 0;//後で消す        
-        
         myRigidBody = this.gameObject.GetComponent<Rigidbody2D>();
 
     	UnityEngine.Vector2 force = new UnityEngine.Vector2(speedX, speedY);

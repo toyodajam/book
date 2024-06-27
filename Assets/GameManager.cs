@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Threading;
 
 public class GameManager : MonoBehaviour
 {
@@ -43,6 +39,7 @@ public class GameManager : MonoBehaviour
     public CountDownTimer CDT;
 
     public int score = 0;
+    public HighScore highScore;
     public float accel;
 
     int number;
@@ -51,7 +48,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //CD.enabled = true;
-        Time.timeScale = 1;
         //score = 0;//後で消す
         float x = Random.Range(rangeA.position.x, rangeB.position.x);
         // rangeAとrangeBのy座標の範囲内でランダムな数値を作成
@@ -135,6 +131,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver(){
+        highScore.SaveScore(score);
         GameOverUI.SetActive(true);
         Time.timeScale = 0;
     }

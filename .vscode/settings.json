@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ブロック崩し２ - コピー - コピー.sln"
+    "dotnet.defaultSolution": "book.sln"
 }

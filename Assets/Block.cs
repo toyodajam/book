@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class Block : MonoBehaviour
 {    [SerializeField]
-    private GameObject createPrefab;
+    //private GameObject createPrefab;
     
     //[Tooltip("生成する範囲A")]
     //public Transform rangeA;

@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 
 public class UBlock : MonoBehaviour
 {    [SerializeField]
-    private GameObject createPrefab2;
+    //private GameObject createPrefab2;
     
-    [Tooltip("生成する範囲A")]
-    public Transform rangeC;
+    //[Tooltip("生成する範囲A")]
+    //public Transform rangeC;
     
-    [Tooltip("生成する範囲B")]
-    public Transform rangeD;
+    //[Tooltip("生成する範囲B")]
+    //public Transform rangeD;
 
     public GameManager GM;
 

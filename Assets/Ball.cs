@@ -110,7 +110,8 @@ myRigidBody.velocity = vec;
     }
     public void GameStart()
         {
-        //CB.score = 0;//後で消す        
+        //CB.score = 0;//後で消す
+        Time.timeScale = 1;        
         myRigidBody = this.gameObject.GetComponent<Rigidbody2D>();
 
     	UnityEngine.Vector2 force = new UnityEngine.Vector2(speedX, speedY);

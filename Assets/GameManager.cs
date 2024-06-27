@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
     public void GameRetry()
     {
         SceneManager.LoadScene("Target2");
-        Ball.GameStart();
+    //Ball.GameStart();
     }
     public void ReturnTitle()
     {

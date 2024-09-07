@@ -27,9 +27,31 @@ public class HighScore : MonoBehaviour
     public void SaveScore(int score){
     for (var i=0; i<ranking.Length; i++) {
         if (ranking[i] < score) {
-        ranking[i] = score;
+
+    switch(i){
+        case 0:
+        //if(ranking[0] < score){
+            ranking[2] = ranking[1];
+            ranking[1] = ranking[0];
+            ranking[0] = score;
+            break;
+        //}
+        case 1:
+        //if(ranking[1] < score){
+            ranking[2] = ranking[1];
+            ranking[1] = score;
+            break;
+        //}
+        case 2:
+        //if(ranking[2] < score){
+            ranking[2] = score;
+            break;
+        //}
+
+    }
     break;
     }
+
     }
     
     FstScore.text = "1st:   " + ranking[0].ToString();

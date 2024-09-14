@@ -1,3 +1,4 @@
+//using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,21 +35,22 @@ public class HighScore : MonoBehaviour
             ranking[2] = ranking[1];
             ranking[1] = ranking[0];
             ranking[0] = score;
-            break;
+            goto End;
         //}
         case 1:
         //if(ranking[1] < score){
             ranking[2] = ranking[1];
             ranking[1] = score;
-            break;
+            goto End;
         //}
         case 2:
         //if(ranking[2] < score){
             ranking[2] = score;
-            break;
+            goto End;
         //}
 
     }
+    End:
     break;
     }
 

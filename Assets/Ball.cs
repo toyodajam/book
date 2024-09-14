@@ -46,10 +46,18 @@ vec = myRigidBody.velocity;
 UnityEngine.Vector2 player_pos = transform.position;
 // 画面左端に達した時、プレイヤーが左方向に動いていたら、右方向の力に反転する
 if ((player_pos.x < screen_LeftBottom.x + 0.25) && (vec.x < 0))
+{
     vec.x *= -1;
+    if(vec.normalized.y > -0.1 && vec.normalized.y < 0.1)
+    vec.y -= 1;
+}
 // 画面右端に達した時、プレイヤーが右方向に動いていたら、左方向の力に反転する
 if ((player_pos.x > screen_RightTop.x - 0.25) && (vec.x > 0))
-    vec.x *= -1;
+    {
+        vec.x *= -1;
+        if(vec.normalized.y > -0.1 && vec.normalized.y < 0.1)
+        vec.y -= 1;
+    }
 // 画面下端に達したときしぬ
 if ((player_pos.y < screen_LeftBottom.y) && (vec.y < 0)) {
     Destroy(this.gameObject);
@@ -57,6 +65,9 @@ if ((player_pos.y < screen_LeftBottom.y) && (vec.y < 0)) {
 }
 // 更新
 myRigidBody.velocity = vec;
+if(vec.magnitude < 0.01)
+vec.x += vec.x;
+
     }
 
     public void Accel(float accel){
@@ -96,17 +107,17 @@ myRigidBody.velocity = vec;
         }
         //壁反射角修正
         UnityEngine.Vector2 vec = myRigidBody.velocity;
-        vec.Normalize();
-        if (0.25f > Mathf.Abs(vec.y))
-        {
-            if (0.0f <= (vec.x * vec.y))
-                vec = UnityEngine.Quaternion.Euler(0.0f, 0.0f, 15.0f) * vec;
-            else
-                vec = UnityEngine.Quaternion.Euler(0.0f, 0.0f, -15.0f) * vec;
-        }
-        speed = myRigidBody.velocity.magnitude;
-        vec *= speed;
-        myRigidBody.velocity = vec;
+        //vec.Normalize();
+        //if (0.25f > Mathf.Abs(vec.y))
+        //{
+        //    if (0.0f <= (vec.x * vec.y))
+        //        vec = UnityEngine.Quaternion.Euler(0.0f, 80.0f, 15.0f) * vec;
+        //    else
+        //        vec = UnityEngine.Quaternion.Euler(0.0f, -80.0f, -15.0f) * vec;
+        //}
+        //speed = myRigidBody.velocity.magnitude;
+        //vec *= speed;
+       // myRigidBody.velocity = vec;
     }
     public void GameStart()
         {

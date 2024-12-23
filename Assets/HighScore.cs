@@ -50,12 +50,11 @@ public class HighScore : MonoBehaviour
         //}
 
     }
-    End:
     break;
     }
 
     }
-    
+    End:
     FstScore.text = "1st:   " + ranking[0].ToString();
     SndScore.text = "2nd:   " + ranking[1].ToString();
     TrdScore.text = "3rd:   " + ranking[2].ToString();
